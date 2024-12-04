@@ -7,9 +7,9 @@ COLOR_VIOLET = (147, 112, 219)
 ENTITY_SPEED = {
     'Level1bg0': 0,
     'Level1bg1': 1,
-    'Level1bg2': 1,
-    'Level1bg3': 2,
-    'Level1bg4': 2,
+    'Level1bg2': 2,
+    'Level1bg3': 3,
+    'Level1bg4': 4,
 }
 
 # M
