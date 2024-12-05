@@ -6,6 +6,16 @@ COLOR_GOLD = (238, 155, 45)
 COLOR_VIOLET = (147, 112, 219)
 
 # E
+ENTITY_HEALTH = {'Level1bg0': 999,
+                 'Level1bg1': 999,
+                 'Level1bg2': 999,
+                 'Level1bg3': 999,
+                 'Level1bg4': 999,
+                 'Player1': 100,
+                 'Player2': 100,
+                 'Meteor1': 15,
+                 'Meteor2': 25,
+                 }
 EVENT_ENEMY = pygame.USEREVENT
 ENTITY_SPEED = {
     'Level1bg0': 0,
