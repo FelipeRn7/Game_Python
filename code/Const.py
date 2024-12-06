@@ -1,9 +1,11 @@
 # C
 import pygame
 
-COLOR_WHITE = (255, 255, 255)
-COLOR_GOLD = (238, 155, 45)
-COLOR_VIOLET = (147, 112, 219)
+C_WHITE = (255, 255, 255)
+C_GOLD = (238, 155, 45)
+C_VIOLET = (147, 112, 219)
+C_GREEN = (0, 128, 0)
+C_CYAN = (0,128,128)
 
 # E
 ENTITY_HEALTH = {'Level1bg0': 999,
@@ -49,6 +51,42 @@ ENTITY_SHOT_DELAY = {
                   'Meteor1': 0,
                   'Meteor2': 0,
                   }
+
+ENTITY_DAMAGE = {
+    'Level1bg0': 0,
+    'Level1bg1': 0,
+    'Level1bg2': 0,
+    'Level1bg3': 0,
+    'Level1bg4': 0,
+    'Player1': 1,
+    'Player1Shot': 6,
+    'Player2': 1,
+    'Player2Shot': 5,
+    'Enemy1': 1,
+    'Enemy1Shot': 8,
+    'Enemy2': 1,
+    'Enemy2Shot': 5,
+    'Meteor1': 10,
+    'Meteor2': 12,
+}
+
+ENTITY_SCORE = {
+    'Level1bg0': 0,
+    'Level1bg1': 0,
+    'Level1bg2': 0,
+    'Level1bg3': 0,
+    'Level1bg4': 0,
+    'Player1': 0,
+    'Player1Shot': 0,
+    'Player2': 0,
+    'Player2Shot': 0,
+    'Enemy1': 100,
+    'Enemy1Shot': 0,
+    'Enemy2': 80,
+    'Enemy2Shot': 0,
+    'Meteor1': 65,
+    'Meteor2': 43,
+}
 
 # M
 MENU_OPTION = ('NEW GAME 1P',
