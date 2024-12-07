@@ -27,6 +27,8 @@ class Player(Entity):
         pass
 
     def shoot(self):
+        player1_shoot_sound = pygame.mixer.Sound("./asset/ShotP.ogg")
+        player2_shoot_sound = pygame.mixer.Sound("./asset/ShotP.ogg")
         # Verifica se o player pode atirar e se o delay chegou a zero
         if self.can_shoot:
             # Decrementa o delay a cada chamada do metodo
@@ -39,8 +41,11 @@ class Player(Entity):
                 # Verifica se a tecla associada ao disparo está pressionada
                 pressed_key = pygame.key.get_pressed()
                 if pressed_key[PLAYER_KEY_SHOOT[self.name]]:
+                    if self.name == 'Player1':
+                        player1_shoot_sound.play()
+                    elif self.name == 'Player2':
+                        player2_shoot_sound.play()
                     # Retorna o disparo (shot) do player
                     return PlayerShot(name=f'{self.name}Shot', position=(self.rect.centerx, self.rect.centery))
-
         # Caso contrário, nenhum disparo é retornado
         return None

@@ -2,8 +2,8 @@
 import pygame
 
 C_WHITE = (255, 255, 255)
-C_GOLD = (238, 155, 45)
-C_VIOLET = (147, 112, 219)
+C_GOLD = (0, 5, 10)
+C_DARKVIOLET = (70, 41, 100)
 C_GREEN = (0, 128, 0)
 C_CYAN = (0,128,128)
 
@@ -85,8 +85,8 @@ ENTITY_DAMAGE = {
     'Enemy1Shot': 8,
     'Enemy2': 1,
     'Enemy2Shot': 5,
-    'Meteor1': 10,
-    'Meteor2': 12,
+    'Meteor1': 25,
+    'Meteor2': 20,
 }
 
 ENTITY_SCORE = {
