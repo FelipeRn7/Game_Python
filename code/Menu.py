@@ -4,13 +4,13 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_WIDTH, C_WHITE, C_GOLD, MENU_OPTION, C_DARKVIOLET
+from code.Const import WIN_WIDTH, C_WHITE, MENU_OPTION, C_DARKVIOLET
 
 
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/Backimage.jpg')#.convert_alpha()
+        self.surf = pygame.image.load('./asset/Backimage.jpg').convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self):
@@ -20,8 +20,8 @@ class Menu:
         while True:
             # DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(50, 'Exclusion', C_GOLD, ((WIN_WIDTH / 2), 50))
-            self.menu_text(50, 'Zone', C_GOLD, ((WIN_WIDTH / 2), 100))
+            self.menu_text(50, 'Exclusion', C_WHITE, ((WIN_WIDTH / 2), 50))
+            self.menu_text(50, 'Zone', C_DARKVIOLET, ((WIN_WIDTH / 2), 100))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:

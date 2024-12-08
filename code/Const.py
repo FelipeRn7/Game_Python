@@ -2,10 +2,7 @@
 import pygame
 
 C_WHITE = (255, 255, 255)
-C_GOLD = (0, 5, 10)
 C_DARKVIOLET = (70, 41, 100)
-C_GREEN = (0, 128, 0)
-C_CYAN = (0,128,128)
 
 # E
 
@@ -22,15 +19,15 @@ ENTITY_HEALTH = {'Level1bg0': 999,
                  'Level2bg2': 999,
                  'Level2bg3': 999,
                  'Level2bg4': 999,
-                 'Player1': 100,
+                 'Player1': 200,
                  'Player1Shot': 1,
-                 'Player2': 100,
+                 'Player2': 185,
                  'Player2Shot': 1,
-                 'Meteor1': 15,
+                 'Meteor1': 30,
                  'Meteor2': 25,
-                 'Enemy1': 20,
+                 'Enemy1': 30,
                  'Enemy1Shot': 1,
-                 'Enemy2': 22,
+                 'Enemy2': 28,
                  'Enemy2Shot': 1,
                  }
 
@@ -78,15 +75,15 @@ ENTITY_DAMAGE = {
     'Level2bg3': 0,
     'Level2bg4': 0,
     'Player1': 1,
-    'Player1Shot': 6,
+    'Player1Shot': 5,
     'Player2': 1,
     'Player2Shot': 5,
     'Enemy1': 1,
     'Enemy1Shot': 8,
     'Enemy2': 1,
     'Enemy2Shot': 5,
-    'Meteor1': 25,
-    'Meteor2': 20,
+    'Meteor1': 1,
+    'Meteor2': 1,
 }
 
 ENTITY_SCORE = {
@@ -132,12 +129,29 @@ PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
                     'Player2': pygame.K_LCTRL}
 
 # S
-SPAWN_TIME = 3000
+SPAWN_TIME = 2000
 
 # T
 TIMEOUT_STEP = 100 # 100 ms
-TIMEOUT_LEVEL = 20000 # 20 s
+TIMEOUT_LEVEL = 10000 # 100 s
 
 # W
 WIN_WIDTH = 576
 WIN_HEIGHT = 324
+
+# S
+SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),
+             'EnterName': (WIN_WIDTH / 2, 80),
+             'Label': (WIN_WIDTH / 2, 90),
+             'Name': (WIN_WIDTH / 2, 110),
+             0: (WIN_WIDTH / 2, 110),
+             1: (WIN_WIDTH / 2, 130),
+             2: (WIN_WIDTH / 2, 150),
+             3: (WIN_WIDTH / 2, 170),
+             4: (WIN_WIDTH / 2, 190),
+             5: (WIN_WIDTH / 2, 210),
+             6: (WIN_WIDTH / 2, 230),
+             7: (WIN_WIDTH / 2, 250),
+             8: (WIN_WIDTH / 2, 270),
+             9: (WIN_WIDTH / 2, 290),
+             }

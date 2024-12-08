@@ -7,7 +7,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import C_WHITE, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, C_GREEN, C_CYAN, SPAWN_TIME, EVENT_TIMEOUT, \
+from code.Const import C_WHITE, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME, EVENT_TIMEOUT, \
     TIMEOUT_STEP, TIMEOUT_LEVEL
 from code.Enemy import Enemy
 from code.Entity import Entity
@@ -33,6 +33,9 @@ class Level:
             self.entity_list.append(player)
         pygame.time.set_timer(EVENT_ENEMY, SPAWN_TIME)
         pygame.time.set_timer(EVENT_TIMEOUT, TIMEOUT_STEP)
+        self.entity_list = [
+            ent for ent in self.entity_list if ent.health > 0 and ent.rect.colliderect(self.window.get_rect())
+        ]
 
     def run(self, player_score: list[int]):
         pygame.mixer_music.load(f'./asset/{self.name}.mp3')
@@ -63,9 +66,9 @@ class Level:
                     if self.timeout == 0:
                         for ent in self.entity_list:
                             if isinstance(ent, Player) and ent.name == 'Player1':
-                                player_score[0] = ent.score
-                            if isinstance(ent, Player) and ent.name == 'Player1':
-                                player_score[1] = ent.score
+                                player_score[0] += ent.score
+                            if isinstance(ent, Player) and ent.name == 'Player2':
+                                player_score[1] += ent.score
                         return True
 
                 found_player = False
