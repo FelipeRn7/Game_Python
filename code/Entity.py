@@ -6,7 +6,7 @@ import pygame.image
 
 from code.Const import ENTITY_HEALTH, ENTITY_DAMAGE, ENTITY_SCORE
 
-
+# Abstract Entity class with health, damage, and score properties.
 class Entity(ABC):
     def __init__(self, name: str, position: tuple):
         self.name = name

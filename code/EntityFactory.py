@@ -25,15 +25,17 @@ class EntityFactory:
                     list_bg.append(Background(f'Level2bg{i}', (0, 0)))
                     list_bg.append(Background(f'Level2bg{i}', (WIN_WIDTH, 0)))
                 return list_bg
+
+            # Creating Players, Enemies and Meteors
             case 'Player1':
-                return Player('Player1', (10, WIN_HEIGHT / 2 - 30), can_shoot=True)
+                return Player('Player1', (10, WIN_HEIGHT / 2 - 30), can_shot=True)
             case 'Player2':
-                return Player('Player2', (10, WIN_HEIGHT / 2 + 30), can_shoot=True)
+                return Player('Player2', (10, WIN_HEIGHT / 2 + 30), can_shot=True)
             case 'Meteor1':
-                return Enemy('Meteor1', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)), can_shoot=False)
+                return Enemy('Meteor1', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)), can_shot=False)
             case 'Meteor2':
-                return Enemy('Meteor2', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)), can_shoot=False)
+                return Enemy('Meteor2', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)), can_shot=False)
             case 'Enemy1':
-                return Enemy('Enemy1', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)), can_shoot=True)
+                return Enemy('Enemy1', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)), can_shot=True)
             case 'Enemy2':
-                return Enemy('Enemy2', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)), can_shoot=True)
+                return Enemy('Enemy2', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)), can_shot=True)

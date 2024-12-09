@@ -125,7 +125,7 @@ PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
                    'Player2': pygame.K_a}
 PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                     'Player2': pygame.K_d}
-PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
+PLAYER_KEY_SHOT = {'Player1': pygame.K_RCTRL,
                     'Player2': pygame.K_LCTRL}
 
 # S
@@ -133,7 +133,7 @@ SPAWN_TIME = 2000
 
 # T
 TIMEOUT_STEP = 100 # 100 ms
-TIMEOUT_LEVEL = 10000 # 100 s
+TIMEOUT_LEVEL = 60000 # 60 s
 
 # W
 WIN_WIDTH = 576
